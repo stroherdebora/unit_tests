@@ -8,11 +8,13 @@ void main() {
     expect(result, equals(20.199469763918696));
   });
 
-  test('Deve lançar uma exceção se altura for < 1', () {
-    expect(() => calcIMC(0, 64), throwsA(isA<Exception>()));
-  });
+  group('Exceções de parãmetros: ', () {
+    test('Deve lançar uma exceção se altura for < 1', () {
+      expect(() => calcIMC(0, 64), throwsA(isA<Exception>()));
+    });
 
-  test('Deve lançar uma exceção se peso for < 1', () {
-    expect(() => calcIMC(1.78, 0), throwsA(isA<Exception>()));
+    test('Deve lançar uma exceção se peso for < 1', () {
+      expect(() => calcIMC(1.78, 0), throwsA(isA<Exception>()));
+    });
   });
 }
