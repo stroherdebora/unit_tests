@@ -8,6 +8,8 @@ void main() {
     expect(result, equals(20.199469763918696));
   });
 
+// Tests can be grouped together using the group() function.
+// Each group's description is added to the beginning of its test's descriptions.
   group('Exceções de parãmetros: ', () {
     test('Deve lançar uma exceção se altura for < 1', () {
       expect(() => calcIMC(0, 64), throwsA(isA<Exception>()));
