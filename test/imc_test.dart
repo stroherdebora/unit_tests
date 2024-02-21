@@ -14,7 +14,14 @@ void main() {
   tearDownAll(() => null);
 
   test('Deve efetuar o cálculo do IMC', () {
-    final result = calcIMC(1.78, 64);
+    // Arrange
+    const peso = 64.0;
+    const altura = 1.78;
+
+    // Act
+    final result = calcIMC(altura, peso);
+
+    // Assert
     expect(result, equals(20.199469763918696));
   });
 
